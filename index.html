@@ -25,28 +25,70 @@
 		
 		<section class="main">
 			<section class="content">
+			
 				<div class="list-heading">
-					<h1>Add Items To Your Shopping List</h1>
-					<h3> Item to add to shopping list</h3>
+					<h2>Add Items To Your Shopping List</h2>
 					<form action="" class="add-item" id="add-item">
-						<input type="text" class='item-name' placeholder="Add your shopping list item" ><br>
-						<input type="text" class="item-price" placeholder="$ price of item" ><br>
+						<input type="text" class='item-name' placeholder="Add your shopping list item" ><div class="clear"></div>
+						<input type="text" class="item-price" placeholder="$ price of item" >
 						<button class="add" id='add'>Add Item</button>
 					</form>
 				</div>
 				
-				<div class="active-list-items">
-					<h1>Your Shopping List</h1>
-					<text class="shopping-list"></text>
-				</div>
+				<div class="caption"><h2>Shopping List</h2></div>
+				<div class="table shopping-list">
+					<div class="thead">
+						<div class="tr">
+							<div class="td item-description">Item Description</div>
+							<div class="td">Price</div>
+							<div class="td">Remove</div>
+						</div>
+					</div>
+					<div class="tbody">
+						<div class="tr">
+							<div class="td col-one"><button>Spagehetti Noodles</button></div>
+							<div class="td col-two"><button>$ 0.99</button></div>
+							<div class="td col-three"><button>Remove</button></div>
+						</div>
+						<div class="tr">
+							<div class="td col-one"><button>1lb ground turkey</button></div>
+							<div class="td col-two"><button>$ 5.99</button></div>
+							<div class="td col-three"><button>Remove</button></div>
+						</div>
+						<div class="tr">
+							<div class="td col-one"><button>Learn how to program : book</button></div>
+							<div class="td col-two"><button>$ 999.99</button></div>
+							<div class="td col-three"><button>Remove</button></div>
+						</div>
+					</div>
+					</div>
+				
 				<div class="removed-list-items"></div>
 			</section>
 		</section>
-		
-		<section class="sidebar">
-			<section class="content"></section>
-		</section>
-		<div class="clear"></div>
 	</section>
 </body>
 </html>
+
+
+<!--
+					<ul>
+						<form class="shopping-list-item">
+							<li>Item #xxxx</li>
+							<li>list-price</li>
+							<button class="done">done</button>
+							<button class="remove">remove</button>
+						</form>
+						<div class="shopping-list-item">
+							<li>Item #xxxx</li>
+							<li>list-price</li>
+						</div>
+						<div class="shopping-list-item">
+							<li>Item #xxxx</li>
+							<li>list-price</li>
+						</div>
+						<div class="shopping-list-item">
+							<li>Item #xxxx</li>
+							<li>list-price</li>
+						</div>
+					</ul>-->

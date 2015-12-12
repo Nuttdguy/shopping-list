@@ -1,19 +1,26 @@
 div {
-/*	outline: 1px solid #f00;*/
+	outline: 1px solid #f00;
 }
 
 body {
-	font-family: 'Chelsea', arial, sans-serif;
-	color: #ebecf2;
+	font-family: arial, sans-serif;
+	color: #2966d9;
 	font-size: 16px;
 }
 
 h1, h2 {
-	font-family: 'Market', "comic sans ms", sans-serif;
+	font-family: 'impact', "comic sans ms", sans-serif;
+	font-weight: 100;
+	letter-spacing: .05em;
 }
 
 h3, h4 {
-	font-family: 'verdana', sans-serif;
+	font-family: 'arial', sans-serif;
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -37,35 +44,29 @@ h3, h4 {
 
 .clear {
 	clear: both;
+	display: block;
 }
 
 .wrapper {
-	width: 100%;
+	width: 800px;
 	height: 100%;
 	margin: 0 auto;
 }
 
 .profile {
-	width: 25%;
+	width: 245px;
 	height: 100%;
 	float: left;
 	display: inline-block;
-	background-color: hsl(0, 0%, 0%);
+/*	background-color: rgba(208, 208, 208, 0.2);*/
 }
 
 .main {
-	width: 65%;
+	width: 555px;
 	height: 100%;
 	display: inline-block;
 	float: left;
-	background-color: bisque;
-}
-
-.sidebar {
-	width: 10%;
-	display: inline-block;
-	float: left;
-	background-color: coral;
+/*	background-color: bisque;*/
 }
 
 .profile .content, 
@@ -92,7 +93,7 @@ h3, h4 {
 
 .profile .description h3 {
 	padding: .5em 1.7em;
-	text-align: right;
+	text-align: center;
 }
 
 /*-----------------------*/
@@ -103,53 +104,114 @@ h3, h4 {
 /*---- LIST-HEADIING STYLES ----*/
 
 .main .list-heading {
-	margin-top: 4em;
-	padding-bottom: 3em;
+	width: 550px;
+	margin: 3em auto 5em;
+	padding-bottom: 1em;
+	overflow: auto;
+	text-align: center;
 }
 
-.main .list-heading h1 {
-	margin-bottom: 1.2m;
+.main .list-heading h1 {}
+
+.main .list-heading input.item-name {
+	width: 350px;
+	height: 34px;
+	font-size: 1.2em;
+	padding: 0 1em;
+	margin-bottom: .3em;
 }
 
-.main .list-heading .item-name {
-	width: 18.2em;
-	height: 40px;
-	font-size: 1.5em;
-	margin: .3em -1.5em;
-	padding-left: 15px;
-}
-
-.main .list-heading .item-price {
-	height: 40px;
-	font-size: 1.5em;
-	padding-left: 15px;
-	margin: .3em 0 0 5.95em;
-}
-
-.main .list-heading h3 {
-	padding: .5em 2.7em;
-	text-align: left;
+.main .list-heading input.item-price {
+	height: 34px;
+	width: 180px;
+	font-size: 1.2em;
+	padding: 0 1em;
+	float: left;
+	margin-bottom: .3em;
 }
 
 .main .list-heading form {
-	padding-right: 10%;
+	width: 400px;
+	text-align: left;
+	margin: auto;
 	color: rgba(70, 82, 82, 0.45);
 }
 
 .main .list-heading button {
-	padding: 14px 3em;
-	float: right;
-	margin: 1.4em 10%;
+	padding: 10px 40px;
 	background-color: #35cc11;
+	border: none;
+	display: inline-block;
+	float: right;
+	margin: .2% 2% 0 0;
+}
+
+/*---- SHOPPING LIST ITEMS ----*/
+
+.table {
+	width: 500px;
+	display: table;
+	border-collapse: separate;
+	letter-spacing: .05em;
+	margin: 0 auto;
+	border-spacing: 0 10px;
+}
+
+.table .thead {
+	display: table-header-group;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.tbody {
+	display: table-row-group;
+}
+
+.tr {
+	display: table-row;
+}
+
+.td {
+	display: table-cell;
+	padding: 1px;
+}
+
+.table .col-one,
+.item-description {
+	width: 350px;
+	text-align: left;
+	padding-left: 12px;
+}
+
+.table .col-one,
+.table .col-two,
+.table .col-three {
+	vertical-align: middle;
+}
+
+.table .col-one button {
+	width: 350px;
+	text-align: left;
+}
+.table .col-two button {
+	width: 100px;
+}
+
+.table .col-one button,
+.table .col-two button {
+	padding: 8px;
+	background-color: #4ed01e;
+	color: #fff;
 	border: none;
 }
 
-/*---- ACTIVE-LIST ITEMS ----*/
-
-
-
-
-
+.table .col-three button {
+	padding: 8px;
+	background-color: #ff3d3d;
+	color: #fff;
+	border: none;
+}
 
 
 
