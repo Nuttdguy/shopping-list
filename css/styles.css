@@ -1,21 +1,25 @@
-div {
-	outline: 1px solid #f00;
-}
 
 body {
 	font-family: arial, sans-serif;
-	color: #2966d9;
+	color: #ffffff;
 	font-size: 16px;
+	background-color: #000;
 }
 
 h1, h2 {
-	font-family: 'impact', "comic sans ms", sans-serif;
-	font-weight: 100;
+	font-family: 'megrim', 'kaushan', sans-serif;
+	font-weight: 400;
+	font-weight: bolder;
 	letter-spacing: .05em;
+	font-size: 1.4em;
+	margin: 6px;
 }
 
-h3, h4 {
-	font-family: 'arial', sans-serif;
+h3, h4, div, input {
+	font-family: 'megrim', 'kaushan', sans-serif;
+	font-weight: bolder;
+	font-size: 1em;
+	margin: 0;
 }
 
 li {
@@ -23,19 +27,52 @@ li {
 	list-style: none;
 }
 
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer {
+	text-align: right;
+	padding-right: 12px;
+}
+
+.wrapper {
+	background-image: url(../css/img/15674961512_65fd49abe7_k.jpg);
+	background-size: cover;
+}
+
+.wrapper-2 {
+	background: -webkit-linear-gradient(rgba(59, 58, 58, 0.5), rgba(0, 0, 0, 0.5));
+	background: linear-gradient(rgb(15, 20, 46), rgba(0, 0, 0, 0.5));
+	height: 100%;
+}
+
+/*-----------------------*/
+/*   PLACEHOLDER STYLES   */
+/*-----------------------*/
+
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    rgba(92, 91, 91, 0.2);
+  color:    rgba(64, 64, 64, 0.8);
+	font-size: .8em;
+	padding-top: 4px;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    rgba(92, 91, 91, 0.2);
-   opacity:  .2;
+ 	color:    rgba(92, 91, 91, 0.8);
+  opacity:  .8;
+	font-size: .8em;
+	padding-top: 4px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    rgba(92, 91, 91, 0.2);
-   opacity:  .2;
+  color:    rgba(92, 91, 91, 0.8);
+  opacity:  .8;
+	font-size: .8em;
+	padding-top: 4px;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #rgba(92, 91, 91, 0.2);
+  color:    #rgba(92, 91, 91, 0.8);
+	font-size: .8em;
+	padding-top: 4px;
 }
 
 /*-----------------------*/
@@ -48,8 +85,8 @@ li {
 }
 
 .wrapper {
-	width: 800px;
-	height: 100%;
+	width: 880px;
+	height: 100vh;
 	margin: 0 auto;
 }
 
@@ -62,7 +99,7 @@ li {
 }
 
 .main {
-	width: 555px;
+	width: 595px;
 	height: 100%;
 	display: inline-block;
 	float: left;
@@ -73,7 +110,7 @@ li {
 .main .content,
 .sidebar .content {
 	width: 100%;
-	padding-bottom: 5em;
+	padding-bottom: 3em;
 	text-align: center;
 }
 
@@ -82,13 +119,14 @@ li {
 /*-----------------------*/
 
 .profile .avatar img {
-	margin-top: 5em;
+	margin: 2em;
 	width: 10em;
 	border-radius: 50%;
 }
 
 .profile .description h2 {
-	font-size: 2.5em;
+	font-size: 1.5em;
+	margin-top: 52px;
 }
 
 .profile .description h3 {
@@ -105,27 +143,29 @@ li {
 
 .main .list-heading {
 	width: 550px;
-	margin: 3em auto 5em;
+	margin: 3em auto 2em;
 	padding-bottom: 1em;
 	overflow: auto;
 	text-align: center;
 }
 
-.main .list-heading h1 {}
+.main .list-heading h2 {
+	margin-bottom: 16px;
+}
 
-.main .list-heading input.item-name {
+.main .list-heading input.add-item-name {
 	width: 350px;
-	height: 34px;
-	font-size: 1.2em;
-	padding: 0 1em;
+	height: 28px;
+	font-size: 1em;
+	padding: 0 10px;
 	margin-bottom: .3em;
 }
 
-.main .list-heading input.item-price {
-	height: 34px;
+.main .list-heading input.add-item-price {
+	height: 28px;
 	width: 180px;
-	font-size: 1.2em;
-	padding: 0 1em;
+	font-size: 1em;
+	padding: 0 10px;
 	float: left;
 	margin-bottom: .3em;
 }
@@ -138,12 +178,13 @@ li {
 }
 
 .main .list-heading button {
-	padding: 10px 40px;
+	padding: 8px 40px;
 	background-color: #35cc11;
 	border: none;
 	display: inline-block;
 	float: right;
-	margin: .2% 2% 0 0;
+	margin: .1% 6.4% 0 0;
+	font-size: 14px;
 }
 
 /*---- SHOPPING LIST ITEMS ----*/
@@ -154,13 +195,13 @@ li {
 	border-collapse: separate;
 	letter-spacing: .05em;
 	margin: 0 auto;
-	border-spacing: 0 10px;
+	border-spacing: 0 2px;
 }
 
 .table .thead {
 	display: table-header-group;
 	font-size: 1.1em;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-weight: 400;
 }
 
@@ -170,50 +211,135 @@ li {
 
 .tr {
 	display: table-row;
+	background-color: #35cc11;
+}
+
+.thead .tr:first-child {
+	background-color: transparent;
+}
+
+.td,
+.col {
+	display: table-cell;
+	padding: 1px;
+	vertical-align: middle;
 }
 
 .td {
-	display: table-cell;
-	padding: 1px;
+	border: 1px solid rgba(150, 148, 148, 0.4);
 }
 
-.table .col-one,
-.item-description {
+div.td {
+	border-right: none;
+	border-left: none;
+}
+
+div.td:last-child {
+	border-right: 1px solid rgba(150, 148, 148, 0.4);
+}
+
+div.td:first-child {
+	border-left: 1px solid rgba(150, 148, 148, 0.4);
+}
+
+.td input {
+	padding: 4px;
+	text-align: center;
+	vertical-align: bottom;
+	border: none;
+	color: #fff;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.td-item-description input {
+	width: 350px;
+	text-align: left;
+}
+
+.td-item-price input,
+.td-item-total input,
+.td-item-amount-spent input {
+	width: 70px;
+}
+
+.td-item-qty input,
+.td-item-qty-total input {
+	width: 40px;
+}
+
+.td-item-description,
+.col-item-description {
 	width: 350px;
 	text-align: left;
 	padding-left: 12px;
 }
 
-.table .col-one,
-.table .col-two,
-.table .col-three {
-	vertical-align: middle;
+/*--------------------------------*/
+/*  PURCHASED ITEMS  */
+/*--------------------------------*/
+
+div.items-purchased {
+	margin-left: 15%;
 }
 
-.table .col-one button {
-	width: 350px;
-	text-align: left;
-}
-.table .col-two button {
-	width: 100px;
+div.td-item-total-spent,
+div.td-item-total-all {
+	padding-right: 12px;
+	text-align: right;
 }
 
-.table .col-one button,
-.table .col-two button {
-	padding: 8px;
-	background-color: #4ed01e;
+div.td-item-total-spent h3,
+div.td-item-total-all h3 {
 	color: #fff;
-	border: none;
+	font-weight: bolder;
+	display: inline-block;
+	width: 50%;
+	padding: 14px 0;
 }
 
-.table .col-three button {
-	padding: 8px;
-	background-color: #ff3d3d;
-	color: #fff;
-	border: none;
+div.td-item-total-all img  {
+	float: left;
+	margin-left: 6px;
+	padding: 6px 10px;
+	width: 28px;
+	height: 28px;
+	border: 1px solid rgba(88, 87, 87, 0.4);
 }
 
+.td-item-total-all {
+	display: block;
+	border-bottom: 1px solid #bebebe;
+	margin-bottom: 30px;
+}
 
+/*div { outline: 1px solid #f00; }*/
+
+/*--------------------------------*/
+/*  TABLE :HOVER EFFECTS */
+/*--------------------------------*/
+
+.tr:hover {
+	background-color: rgb(39, 137, 16);
+	transition: background-color .6s;
+}
+
+.td-item-total-all img:hover {
+	background-color: #f82600;
+	transition: background-color .5s;
+	cursor: pointer;
+}
+
+.list-heading form button:hover {
+	background-color: rgb(39, 137, 16);
+	transition: background-color .6s;
+}
+
+a:hover {
+	background-color: #f82600;
+	transition: background-color .5s;
+	cursor: pointer;
+}
 
 
 

@@ -3,22 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link href='https://fonts.googleapis.com/css?family=Chelsea+Market|Ruda:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Allura|Megrim' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/normalize.css" >
 	<link rel="stylesheet" href="/css/styles.css" >
 </head>
+
 <body>
 	<section class="wrapper">
-		
+		<div class="wrapper-2">
+			
 		<section class="profile">
 			<section class="content">
-				<div class="avatar">
-					<img src="/img/Shop_bag.png" alt="avatar">
-				</div>
-				<div class="description">
+				<div class="description" >
 					<h2>Welcome</h2>
 					<h3>Phouthalang Pygnasak</h3>
 					<h3>December 12th 2015</h3>
+				</div>
+				<div class="avatar">
+					<img src="img/self.png" alt="avatar">
 				</div>
 			</section>
 		</section>
@@ -27,11 +29,11 @@
 			<section class="content">
 			
 				<div class="list-heading">
-					<h2>Add Items To Your Shopping List</h2>
-					<form action="" class="add-item" id="add-item">
-						<input type="text" class='item-name' placeholder="Add your shopping list item" ><div class="clear"></div>
-						<input type="text" class="item-price" placeholder="$ price of item" >
-						<button class="add" id='add'>Add Item</button>
+					<h2>Add Items To Shopping List</h2>
+					<form action="" class="add-item-form" id="add-item-form">
+						<input type="text" class='add-item-name' placeholder="Enter shopping list item" ><div class="clear"></div>
+						<input type="text" class="add-item-price" placeholder="$ price of item" >
+						<button class="add-item-button" id='add-item-button'>Add Item</button>
 					</form>
 				</div>
 				
@@ -39,33 +41,89 @@
 				<div class="table shopping-list">
 					<div class="thead">
 						<div class="tr">
-							<div class="td item-description">Item Description</div>
-							<div class="td">Price</div>
-							<div class="td">Remove</div>
+							<div class="col col-qty">Qty</div>
+							<div class="col col-item-description">Item Description</div>
+							<div class="col col-price">Price</div>
+							<div class="col col-total">Total</div>
 						</div>
 					</div>
+					
 					<div class="tbody">
 						<div class="tr">
-							<div class="td col-one"><button>Spagehetti Noodles</button></div>
-							<div class="td col-two"><button>$ 0.99</button></div>
-							<div class="td col-three"><button>Remove</button></div>
+							<div class="td td-item-qty">
+								<input type="text" placeholder="1" maxlength="2" ></div>
+							<div class="td td-item-description">
+								<input type="text" placeholder="Shopping list item #1" disabled='true'></div>
+							<div class="td td-item-price">
+								<input type="text" placeholder="$0.99" disabled='true'></div>
+							<div class="td td-item-total">
+								<input type="text" placeholder="$0.99" disabled='true'></div>
 						</div>
+						
 						<div class="tr">
-							<div class="td col-one"><button>1lb ground turkey</button></div>
-							<div class="td col-two"><button>$ 5.99</button></div>
-							<div class="td col-three"><button>Remove</button></div>
+							<div class="td td-item-qty">
+								<input type="text" placeholder="1" maxlength="2"></div>
+							<div class="td td-item-description">
+								<input type="text" placeholder="Shopping list item #2" disabled='true'></div>
+							<div class="td td-item-price">
+								<input type="text" placeholder="$5.99" disabled='true'></div>
+							<div class="td td-item-total">
+								<input type="text" placeholder="$5.99" disabled='true'></div>
 						</div>
+						
 						<div class="tr">
-							<div class="td col-one"><button>Learn how to program : book</button></div>
-							<div class="td col-two"><button>$ 999.99</button></div>
-							<div class="td col-three"><button>Remove</button></div>
+							<div class="td td-item-qty">
+								<input type="text" placeholder="1" maxlength="2"></div>
+							<div class="td td-item-description">
+								<input type="text" placeholder="Shopping list item #3" disabled='true'></div>
+							<div class="td td-item-price">
+								<input type="text" placeholder="$499.99" disabled='true'></div>
+							<div class="td td-item-total">
+								<input type="text" placeholder="$499.99" disabled='true'></div>
 						</div>
-					</div>
-					</div>
+					</div> <!-- End of tbody -->
+				</div> <!-- End of table shopping-list -->
 				
-				<div class="removed-list-items"></div>
+				<div class="td-item-total-all">
+					<img class="trash" src="/img/x.png">
+					<h3>$6.98</h3>
+				</div>
+				
+				<div class="caption"><h2>Purchased Items</h2></div>
+				<div class="table items-purchased">
+					<div class="thead">
+						<div class="tr">
+							<div class="col">Qty</div>
+							<div class="col col-item-description">Item description</div>
+							<div class="col">Spent</div>
+						</div>
+					</div>
+					
+					<div class="tbody">
+						<div class="tr">
+							<div class="td td-item-qty-total"><input type="text" placeholder="1" disabled="true"></div>
+							<div class="td td-item-description"><input type="text" placeholder="Purchased Item #1" disabled="true"></div>
+							<div class="td td-item-amount-spent"><input type="text" placeholder="$0.99" disabled="true"></div>
+						</div>
+						
+						<div class="tr">
+							<div class="td td-item-qty-total"><input type="text" placeholder="1" disabled="true"></div>
+							<div class="td td-item-description"><input type="text" placeholder="Purchased Item #2" disabled="true"></div>
+							<div class="td td-item-amount-spent"><input type="text" placeholder="$5.99" disabled="true"></div>
+						</div>
+					</div>	<!-- End of tbody items-purchased -->				
+				</div> <!-- End of table items-purchased -->
+				
+				<div class="td-item-total-spent">
+					<h3>$6.98</h3>
+				</div>
+				
 			</section>
+			<footer>
+				<h4><a href="https://www.flickr.com/photos/56218409@N03/">Background Image by Matthias Ripp</a></h4>
+			</footer>
 		</section>
+	</div>
 	</section>
 </body>
 </html>
