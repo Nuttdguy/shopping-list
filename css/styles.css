@@ -4,6 +4,11 @@ body {
 	color: #ffffff;
 	font-size: 16px;
 	background-color: #000;
+/*
+	background-image: url(../css/img/15674961512_65fd49abe7_k.jpg) no-repeat center center fixed;
+	background-size: contain;
+*/
+	height: 100%;
 }
 
 h1, h2 {
@@ -38,15 +43,22 @@ footer {
 }
 
 .wrapper {
-	background-image: url(../css/img/15674961512_65fd49abe7_k.jpg);
-	background-size: cover;
+/*	background-image: url(../css/img/15674961512_65fd49abe7_k.jpg);*/
+/*	background-size: cover;*/
+/*	height: 100%;*/
+	padding-bottom: 70%;
+	background: -webkit-linear-gradient(rgba(59, 58, 58, 0.5), rgba(0, 0, 0, 0.5));
+	background: linear-gradient(rgb(15, 20, 46), rgba(0, 0, 0, 0.5));
 }
+
+/*
 
 .wrapper-2 {
 	background: -webkit-linear-gradient(rgba(59, 58, 58, 0.5), rgba(0, 0, 0, 0.5));
 	background: linear-gradient(rgb(15, 20, 46), rgba(0, 0, 0, 0.5));
-	height: 100%;
+	overflow: hidden;
 }
+*/
 
 /*-----------------------*/
 /*   PLACEHOLDER STYLES   */
@@ -86,7 +98,7 @@ footer {
 
 .wrapper {
 	width: 880px;
-	height: 100vh;
+	height: auto;
 	margin: 0 auto;
 }
 
@@ -170,7 +182,7 @@ footer {
 	margin-bottom: .3em;
 }
 
-.main .list-heading form {
+.list-heading .add-item {
 	width: 400px;
 	text-align: left;
 	margin: auto;
@@ -183,7 +195,7 @@ footer {
 	border: none;
 	display: inline-block;
 	float: right;
-	margin: .1% 6.4% 0 0;
+	margin: .1% 18.5% 0 0;
 	font-size: 14px;
 }
 
@@ -196,6 +208,7 @@ footer {
 	letter-spacing: .05em;
 	margin: 0 auto;
 	border-spacing: 0 2px;
+	z-index: 99;
 }
 
 .table .thead {
@@ -205,16 +218,19 @@ footer {
 	font-weight: 400;
 }
 
-.tbody {
+.tbody,
+.tbody-purchases {
 	display: table-row-group;
 }
 
-.tr {
+.tr,
+.tr-purchases {
 	display: table-row;
 	background-color: #35cc11;
 }
 
-.thead .tr:first-child {
+.thead .tr:first-child,
+.thead .tr-purchases:first-child {
 	background-color: transparent;
 }
 
@@ -319,7 +335,8 @@ div.td-item-total-all img  {
 /*  TABLE :HOVER EFFECTS */
 /*--------------------------------*/
 
-.tr:hover {
+.tr:hover,
+.tr-purchases:hover {
 	background-color: rgb(39, 137, 16);
 	transition: background-color .6s;
 }

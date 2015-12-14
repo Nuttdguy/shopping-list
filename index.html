@@ -30,11 +30,12 @@
 			
 				<div class="list-heading">
 					<h2>Add Items To Shopping List</h2>
-					<form action="" class="add-item-form" id="add-item-form">
-						<input type="text" class='add-item-name' placeholder="Enter shopping list item" ><div class="clear"></div>
-						<input type="text" class="add-item-price" placeholder="$ price of item" >
-						<button class="add-item-button" id='add-item-button'>Add Item</button>
-					</form>
+					<div class="add-item">
+						<input type="text" class='add-item-name' placeholder="Enter shopping list item">
+						<input type="text" class="add-item-price" placeholder="$ price of item">	
+					</div>
+					<button class="add-item-button" id='add-item-button'>Add Item</button>
+					<div class="clear"></div>
 				</div>
 				
 				<div class="caption"><h2>Shopping List</h2></div>
@@ -51,36 +52,38 @@
 					<div class="tbody">
 						<div class="tr">
 							<div class="td td-item-qty">
-								<input type="text" placeholder="1" maxlength="2" ></div>
+								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2" ></div>
 							<div class="td td-item-description">
-								<input type="text" placeholder="Shopping list item #1" disabled='true'></div>
+								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="true"></div>
 							<div class="td td-item-price">
-								<input type="text" placeholder="$0.99" disabled='true'></div>
+								<input class="td-item-price-input" type="text" placeholder="$0.00" disabled="true"></div>
 							<div class="td td-item-total">
-								<input type="text" placeholder="$0.99" disabled='true'></div>
+								<input class="td-item-total-input" type="text" placeholder="$0.00" disabled="true"></div>
+						</div>
+						
+<!--
+						<div class="tr">
+							<div class="td td-item-qty">
+								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2"></div>
+							<div class="td td-item-description">
+								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="false"></div>
+							<div class="td td-item-price">
+								<input class="td-item-price-input" type="text" placeholder="$5.99" disabled="true"></div>
+							<div class="td td-item-total">
+								<input class="td-item-total-input" type="text" placeholder="$5.99" disabled="true"></div>
 						</div>
 						
 						<div class="tr">
 							<div class="td td-item-qty">
-								<input type="text" placeholder="1" maxlength="2"></div>
+								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2"></div>
 							<div class="td td-item-description">
-								<input type="text" placeholder="Shopping list item #2" disabled='true'></div>
+								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="true"></div>
 							<div class="td td-item-price">
-								<input type="text" placeholder="$5.99" disabled='true'></div>
+								<input class="td-item-price-input" type="text" placeholder="$499.99" disabled="true"></div>
 							<div class="td td-item-total">
-								<input type="text" placeholder="$5.99" disabled='true'></div>
+								<input class="td-item-total-input" type="text" placeholder="$499.99" disabled="true"></div>
 						</div>
-						
-						<div class="tr">
-							<div class="td td-item-qty">
-								<input type="text" placeholder="1" maxlength="2"></div>
-							<div class="td td-item-description">
-								<input type="text" placeholder="Shopping list item #3" disabled='true'></div>
-							<div class="td td-item-price">
-								<input type="text" placeholder="$499.99" disabled='true'></div>
-							<div class="td td-item-total">
-								<input type="text" placeholder="$499.99" disabled='true'></div>
-						</div>
+-->
 					</div> <!-- End of tbody -->
 				</div> <!-- End of table shopping-list -->
 				
@@ -92,21 +95,21 @@
 				<div class="caption"><h2>Purchased Items</h2></div>
 				<div class="table items-purchased">
 					<div class="thead">
-						<div class="tr">
+						<div class="tr-purchases">
 							<div class="col">Qty</div>
 							<div class="col col-item-description">Item description</div>
 							<div class="col">Spent</div>
 						</div>
 					</div>
 					
-					<div class="tbody">
-						<div class="tr">
+					<div class="tbody-purchases">
+						<div class="tr-purchases">
 							<div class="td td-item-qty-total"><input type="text" placeholder="1" disabled="true"></div>
 							<div class="td td-item-description"><input type="text" placeholder="Purchased Item #1" disabled="true"></div>
 							<div class="td td-item-amount-spent"><input type="text" placeholder="$0.99" disabled="true"></div>
 						</div>
 						
-						<div class="tr">
+						<div class="tr-purchases">
 							<div class="td td-item-qty-total"><input type="text" placeholder="1" disabled="true"></div>
 							<div class="td td-item-description"><input type="text" placeholder="Purchased Item #2" disabled="true"></div>
 							<div class="td td-item-amount-spent"><input type="text" placeholder="$5.99" disabled="true"></div>
@@ -125,28 +128,8 @@
 		</section>
 	</div>
 	</section>
+	
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
-
-
-<!--
-					<ul>
-						<form class="shopping-list-item">
-							<li>Item #xxxx</li>
-							<li>list-price</li>
-							<button class="done">done</button>
-							<button class="remove">remove</button>
-						</form>
-						<div class="shopping-list-item">
-							<li>Item #xxxx</li>
-							<li>list-price</li>
-						</div>
-						<div class="shopping-list-item">
-							<li>Item #xxxx</li>
-							<li>list-price</li>
-						</div>
-						<div class="shopping-list-item">
-							<li>Item #xxxx</li>
-							<li>list-price</li>
-						</div>
-					</ul>-->
