@@ -335,7 +335,8 @@ div.td-item-total-all img  {
 /*  TABLE :HOVER EFFECTS */
 /*--------------------------------*/
 
-.tr:hover {
+.tr:hover,
+.tr-purchases:hover {
 	background-color: rgb(39, 137, 16);
 	transition: background-color .6s;
 }
