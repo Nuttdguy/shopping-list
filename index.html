@@ -49,17 +49,17 @@
 						</div>
 					</div>
 					
-					<div class="tbody">
-						<div class="tr">
-							<div class="td td-item-qty">
-								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2" ></div>
-							<div class="td td-item-description">
-								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="true"></div>
-							<div class="td td-item-price">
-								<input class="td-item-price-input" type="text" placeholder="$0.00" disabled="true"></div>
-							<div class="td td-item-total">
-								<input class="td-item-total-input" type="text" placeholder="$0.00" disabled="true"></div>
-						</div>
+					<div class="tbody" id="sortable">
+						<ul class="tr" >
+							<li class="td td-item-qty" id="js-ui-state-default">
+								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2" ></li>
+							<li class="td td-item-description" id="js-ui-state-default">
+								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="true"></li>
+							<li class="td td-item-price" id="js-ui-state-default">
+								<input class="td-item-price-input" type="text" placeholder="$0.00" disabled="true"></li>
+							<li class="td td-item-total" id="js-ui-state-default">
+								<input class="td-item-total-input" type="text" placeholder="$0.00" disabled="true"></li>
+						</ul>
 						
 <!--
 						<div class="tr">
@@ -130,6 +130,10 @@
 	</section>
 	
 	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="js/app.js"></script>
+	<script>
+		drag();
+	</script>
 </body>
 </html>

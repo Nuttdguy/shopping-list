@@ -14,11 +14,11 @@ $(document).ready(function() {
 		var inputPrice = $('<input class="td-item-price-input" type="text" disabled="true">').text($('input[type=text].add-item-price')).val(itemPrice);
 		var inputTotal = $('<input class="td-item-total-input" type="text" disabled="true">').text($('input[type=text].add-item-price')).val(itemPrice);
 		
-		var tr = $("<div>", {class: "tr"});
-		var tdQty = $("<div>", {class: "td td-item-qty"}).append(inputQty);
-		var tdDescription = $("<div>", {class: "td td-item-description"}).append(inputDescription);
-		var tdPrice = $("<div>", {class: "td td-item-price"}).append(inputPrice);
-		var tdTotal = $("<div>", {class: "td td-item-total"}).append(inputTotal);
+		var tr = $("<ul>", {class: "tr"});
+		var tdQty = $("<li>", {class: "td td-item-qty"}).append(inputQty);
+		var tdDescription = $("<li>", {class: "td td-item-description"}).append(inputDescription);
+		var tdPrice = $("<li>", {class: "td td-item-price"}).append(inputPrice);
+		var tdTotal = $("<li>", {class: "td td-item-total"}).append(inputTotal);
 		
 		var tableRow = $(tr).append(tdQty).append(tdDescription).append(tdPrice).append(tdTotal).appendTo('.tbody');
 
@@ -28,3 +28,7 @@ $(document).ready(function() {
 	
 });
 
+function drag() {
+			$('#sortable').sortable();
+			$('#sortable').disableSelection();
+}
