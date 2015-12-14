@@ -170,7 +170,7 @@ footer {
 	margin-bottom: .3em;
 }
 
-.main .list-heading form {
+.list-heading .add-item {
 	width: 400px;
 	text-align: left;
 	margin: auto;
@@ -183,7 +183,7 @@ footer {
 	border: none;
 	display: inline-block;
 	float: right;
-	margin: .1% 6.4% 0 0;
+	margin: .1% 18.5% 0 0;
 	font-size: 14px;
 }
 
