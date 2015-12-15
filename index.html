@@ -31,10 +31,10 @@
 				<div class="list-heading">
 					<h2>Add Items To Shopping List</h2>
 					<div class="add-item">
-						<input type="text" class="add-item-name" placeholder="Enter shopping list item">
-						<input type="number" name="quantity" class="add-item-price" value="$ ">	
+						<input type="text" class="add-item-name" maxlength="30" placeholder="Enter shopping list item">
+						<input type="text" name="quantity" class="add-item-price" value=" ">	
 					</div>
-					<button class="add-item-button" id='add-item-button'>Add Item</button>
+					<button class="add-item-button" onclick="formatCurrency()" id='add-item-button'>Add Item</button>
 					<div class="clear"></div>
 				</div>
 				
@@ -53,10 +53,10 @@
 <!--
 						<ul class="tr" >
 							<li class="td">
-								<input class="col-qty-input ui-state-default" type="text" placeholder="1" maxlength="2" >
-								<input class="td-item-description-input ui-state-default" type="text" placeholder="Shopping list item" >
-								<input class="td-item-price-input ui-state-default" type="text" placeholder="$ 0.00"  disabled >
-								<input class="td-item-total-input ui-state-default" type="text" placeholder="$ 0.00"  disabled >
+								<input class="col-qty-input ui-state-default" value="" change="updateTotalPrice()" id="totalQty" type="number" placeholder="1" maxlength="2" >
+								<input class="td-item-description-input ui-state-default" type="text" maxlength="30" placeholder="Shopping list item" >
+								<input class="td-item-price-input ui-state-default" id="unitPrice" type="text" placeholder="$ 0.00" value="1" readonly="readonly" >
+								<input class="td-item-total-input ui-state-default" id="totalPrice" type="text" placeholder="$ 0.00" value="" readonly="readonly" >
 							</li>
 						</ul>
 -->
@@ -66,7 +66,7 @@
 				
 				<div class="total-all">
 					<img class="trash" src="img/x.png" id="trash" >
-					<h3>$6.98</h3>
+					<h3 id='shopping-list-total'>$ sub-total</h3>
 				</div>
 				<div class="clear"></div>
 				
@@ -82,18 +82,27 @@
 					</div>
 					
 					<div class="tbody-purchases dropfalse connectedSortable" id="sortable2" >
-						<ul class="tr" >
 <!--
+						<ul class="tr" >
 							<li class="td">
 								<input class="col-qty ui-state-highlight" type="text" placeholder="1" maxlength="2" >
 								<input class="td-item-description ui-state-highlight" type="text" placeholder="Shopping list item" >
 								<input class="td-item-price ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
 								<input class="td-item-total ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
 							</li>
--->
 						</ul>
-						<div id="sortable3" class="droptrue"></div>
-					</div>	<!-- End of tbody items-purchased -->				
+-->
+					</div>	<!-- End of tbody items-purchased -->		
+					
+					<div class="tbody-purchases droptrue connectedSortable" id="sortable3" >
+<!--
+						<ul class="tr" >
+
+						</ul>
+-->
+					</div>	<!-- End of tbody items-purchased 3 -->
+					<br style="clear:both">
+						
 				</div> <!-- End of table items-purchased -->
 				
 				<div class="total-spent">
