@@ -146,6 +146,7 @@ footer {
 .profile .description h2 {
 	font-size: 1.5em;
 	margin-top: 52px;
+	text-align: center;
 }
 
 .profile .description h3 {
@@ -176,8 +177,10 @@ footer {
 	width: 350px;
 	height: 28px;
 	font-size: 1em;
+	font-weight: bolder;
 	padding: 0 10px;
 	margin-bottom: .3em;
+	color: #000;
 }
 
 .main .list-heading input.add-item-price {
@@ -185,8 +188,10 @@ footer {
 	width: 180px;
 	font-size: 1em;
 	padding: 0 10px;
+	font-weight: bolder;
 	float: left;
 	margin-bottom: .3em;
+	color: #000;
 }
 
 .list-heading .add-item {
@@ -210,7 +215,8 @@ footer {
 
 /*  COME BACK AND MODIFY TABLE*/
 .table { 
-	width: 500px;
+	width: 100%;
+	height: 200px;
 	display: table;
 	letter-spacing: .05em;
 	margin: 0 auto;
@@ -219,7 +225,7 @@ footer {
 
 .thead-shopping,
 .thead-purchases {
-	width: 600px;
+	width: 100%;
 	font-size: 1.1em;
 	text-transform: capitalize;
 	font-weight: 400;
@@ -235,6 +241,7 @@ footer {
 .tbody-purchases .tr {
 	background-color: #35cc11;
 	margin: 2px;
+	height: 34px;
 }
 
 .td,
@@ -261,36 +268,25 @@ footer {
 	margin-bottom: 20px;
 }
 
-.tbody-shopping li,
-.tbody-purchases li {
-	width: 100%;
-	margin: auto;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.tbody-shopping li img,
-.tbody-purchases li img {
-	float: right;
-}
-
 .col-item-description,
 .td-item-description-input,
 .td-item-description {
-	width: 342px;
+	width: 372px;
 	text-align: center!important;
 	padding-left: 12px;
 }
 
-.col-price,
-.col-total,
-.col-spent,
 .td-item-price-input,
 .td-item-price,
 .td-item-total-input,
-.td-item-total,
-.col-trash {
+.td-item-total{
 	width: 70px;
+}
+
+.col-price,
+.col-total,
+.col-spent {
+	width: 90px;
 }
 
 .col-qty-input,
@@ -324,6 +320,7 @@ ul.ui-sortable-handle {
 
 .total-spent h3 {
 	display: block;
+	height: 55px;
 	margin-left: 6px;;
 	width: 580px;
 	font-size: 1.3em;
@@ -331,38 +328,29 @@ ul.ui-sortable-handle {
 
 .total-all h3 {
 	color: #fff;
+	float: right;
 	font-weight: bolder;
 	display: block;
-	width: 100%;
+	width: 50%;
 	font-size: 1.3em;
 	padding: 6px 0 12px;
 }
 
-.tbody-shopping img,
-.tbody-purchases img {
-	margin-top: 2px;
-	vertical-align: middle;
-}
-
-.thead-shopping img,
-.thead-purchases img {
-	float: right;
-	margin-right: 6px;
-}
-
-.thead-shopping li img,
-.tbody-shopping li img,
-.thead-purchases li img,
-.tbody-purchases li img {
+.total-all img {
 	display: inline-block;
+	float: left;
 	padding: 6px 10px;
-	width: 14px;
-	height: 14px;
+	width: 34px;
+	height: 34px;
 	border: 1px solid rgba(88, 87, 87, 0.4);
+	margin-top: -6px;
+	z-index: 99;
 }
 
 .total-all {
 	display: block;
+	height: 50px;
+	width: 100%;
 	border-bottom: 1px solid #bebebe;
 	margin-bottom: 40px;
 }
@@ -379,13 +367,13 @@ ul.ui-sortable-handle {
 	transition: background-color .6s;
 }
 
-.td-item-total-all img:hover {
+.total-all img:hover {
 	background-color: #f82600;
 	transition: background-color .5s;
 	cursor: pointer;
 }
 
-.list-heading form button:hover {
+.list-heading button:hover {
 	background-color: rgb(39, 137, 16);
 	transition: background-color .6s;
 }

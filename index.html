@@ -31,8 +31,8 @@
 				<div class="list-heading">
 					<h2>Add Items To Shopping List</h2>
 					<div class="add-item">
-						<input type="text" class='add-item-name' placeholder="Enter shopping list item">
-						<input type="text" class="add-item-price" value="$ ">	
+						<input type="text" class="add-item-name" placeholder="Enter shopping list item">
+						<input type="number" name="quantity" class="add-item-price" value="$ ">	
 					</div>
 					<button class="add-item-button" id='add-item-button'>Add Item</button>
 					<div class="clear"></div>
@@ -46,28 +46,29 @@
 							<li class="col col-item-description">Item Description</li>
 							<li class="col col-price">Price</li>
 							<li class="col col-total">Total</li>
-							<li class="col col-trash"><img class="col-trash" src="img/x.png" alt="trash"></li>
 						</ul>
 					</div>
 					
-					<div class="tbody-shopping connectedSortable" id="sortable1">
+					<div class="tbody-shopping connectedSortable droptrue" id="sortable1">
+<!--
 						<ul class="tr" >
-							<li class"td">
+							<li class="td">
 								<input class="col-qty-input ui-state-default" type="text" placeholder="1" maxlength="2" >
 								<input class="td-item-description-input ui-state-default" type="text" placeholder="Shopping list item" >
 								<input class="td-item-price-input ui-state-default" type="text" placeholder="$ 0.00"  disabled >
 								<input class="td-item-total-input ui-state-default" type="text" placeholder="$ 0.00"  disabled >
-								<img class="trash ui-state-default" src="img/x.png" alt="trash">
 							</li>
 						</ul>
+-->
 
 					</div> <!-- End of tbody -->
 				</div> <!-- End of table shopping-list -->
 				
 				<div class="total-all">
-<!--					<img class="trash" src="img/x.png">-->
+					<img class="trash" src="img/x.png" id="trash" >
 					<h3>$6.98</h3>
 				</div>
+				<div class="clear"></div>
 				
 				<div class="caption"><h2>Purchased Items</h2></div>
 				<div class="table item-purchases">
@@ -77,20 +78,21 @@
 							<li class="col col-item-description">Item description</li>
 							<li class="col col-price">Price</li>
 							<li class="col col-spent">Spent</li>
-							<li class="col col-trash"><img class="col-trash" src="img/x.png" alt="trash"></li>
 						</ul>
 					</div>
 					
-					<div class="tbody-purchases connectedSortable" id="sortable2" >
+					<div class="tbody-purchases dropfalse connectedSortable" id="sortable2" >
 						<ul class="tr" >
-							<li class"td">
+<!--
+							<li class="td">
 								<input class="col-qty ui-state-highlight" type="text" placeholder="1" maxlength="2" >
 								<input class="td-item-description ui-state-highlight" type="text" placeholder="Shopping list item" >
 								<input class="td-item-price ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
 								<input class="td-item-total ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
-								<img class="trash ui-state-highlight" src="img/x.png" alt="trash">
 							</li>
+-->
 						</ul>
+						<div id="sortable3" class="droptrue"></div>
 					</div>	<!-- End of tbody items-purchased -->				
 				</div> <!-- End of table items-purchased -->
 				
