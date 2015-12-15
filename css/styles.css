@@ -258,7 +258,7 @@ footer {
 	vertical-align: bottom;
 	font-size: 1em;
 	border: none;
-	color: #fff;
+	color: #000;
 	background-color: transparent;
 	cursor: pointer;
 }
@@ -304,8 +304,10 @@ footer {
 	background-color: transparent;
 }
 
+#sortable1,
+#sortable2,
 #sortable3 {
-	height: 5px;
+	min-height: 5px;
 }
 
 /*--------------------------------
@@ -342,6 +344,10 @@ footer {
 
 .total-all img {
 	display: inline-block;
+/*
+	background-color: rgba(248, 38, 0, 0);
+	transition: background-color .5s;
+*/
 	float: left;
 	padding: 6px 10px;
 	width: 34px;
@@ -367,13 +373,15 @@ footer {
 
 .tr:hover,
 .tr-purchases:hover {
-	background-color: rgb(39, 137, 16);
+	background-color: rgb(250, 255, 249);
 	transition: background-color .6s;
 }
 
 .total-all img:hover {
-	background-color: #f82600;
+/*
+	background-color: rgba(248, 38, 0, 0);
 	transition: background-color .5s;
+*/
 	cursor: pointer;
 }
 
