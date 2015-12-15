@@ -300,8 +300,12 @@ footer {
 	padding: 2px;
 }
 
-ul.ui-sortable-handle {
+.ui-sortable-handle {
 	background-color: transparent;
+}
+
+#sortable3 {
+	height: 5px;
 }
 
 /*--------------------------------

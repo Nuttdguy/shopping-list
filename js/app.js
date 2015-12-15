@@ -8,26 +8,26 @@ $(document).ready(function() {
 
 //  SORT LIST ITEMS BETWEEN TABLES
 
-function sort() {
-	$( "#sortable1, #sortable2" ).sortable({
-		connectWith: ".connectedSortable"
-	}).disableSelection();
-};
-
 //function sort() {
-//	
-//	$( "div.droptrue" ).sortable({
+//	$( "#sortable1, #sortable2" ).sortable({
 //		connectWith: ".connectedSortable"
-//	});
-//
-//	$( "div.dropfalse" ).sortable({
-//		connectWith: ".connectedSortable",
-//		dropOnEmpty: false
-//	});
-//
-//	$( "#sortable1, #sortable2, #sortable3" ).disableSelection();
-//	
-//});
+//	}).disableSelection();
+//};
+
+function sort() {
+	
+	$( "div.droptrue" ).sortable({
+		connectWith: "div"
+	});
+
+	$( "div.dropfalse" ).sortable({
+		connectWith: "div",
+		dropOnEmpty: false
+	});
+
+	$( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+	
+};
 	
 	
 function trash() {
