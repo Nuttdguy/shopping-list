@@ -32,7 +32,7 @@
 					<h2>Add Items To Shopping List</h2>
 					<div class="add-item">
 						<input type="text" class='add-item-name' placeholder="Enter shopping list item">
-						<input type="text" class="add-item-price" placeholder="$ price of item">	
+						<input type="text" class="add-item-price" value="$ ">	
 					</div>
 					<button class="add-item-button" id='add-item-button'>Add Item</button>
 					<div class="clear"></div>
@@ -41,95 +41,76 @@
 				<div class="caption"><h2>Shopping List</h2></div>
 				<div class="table shopping-list">
 					<div class="thead">
-						<div class="tr">
-							<div class="col col-qty">Qty</div>
-							<div class="col col-item-description">Item Description</div>
-							<div class="col col-price">Price</div>
-							<div class="col col-total">Total</div>
-						</div>
+						<ul class="thead-shopping">
+							<li class="col col-qty">Qty</li>
+							<li class="col col-item-description">Item Description</li>
+							<li class="col col-price">Price</li>
+							<li class="col col-total">Total</li>
+							<li class="col col-trash"><img class="col-trash" src="img/x.png" alt="trash"></li>
+						</ul>
 					</div>
 					
-					<div class="tbody">
-						<div class="tr">
-							<div class="td td-item-qty">
-								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2" ></div>
-							<div class="td td-item-description">
-								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="true"></div>
-							<div class="td td-item-price">
-								<input class="td-item-price-input" type="text" placeholder="$0.00" disabled="true"></div>
-							<div class="td td-item-total">
-								<input class="td-item-total-input" type="text" placeholder="$0.00" disabled="true"></div>
-						</div>
-						
-<!--
-						<div class="tr">
-							<div class="td td-item-qty">
-								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2"></div>
-							<div class="td td-item-description">
-								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="false"></div>
-							<div class="td td-item-price">
-								<input class="td-item-price-input" type="text" placeholder="$5.99" disabled="true"></div>
-							<div class="td td-item-total">
-								<input class="td-item-total-input" type="text" placeholder="$5.99" disabled="true"></div>
-						</div>
-						
-						<div class="tr">
-							<div class="td td-item-qty">
-								<input class="td-item-qty-input" type="text" placeholder="1" maxlength="2"></div>
-							<div class="td td-item-description">
-								<input class="td-item-description-input" type="text" placeholder="Shopping list item" disabled="true"></div>
-							<div class="td td-item-price">
-								<input class="td-item-price-input" type="text" placeholder="$499.99" disabled="true"></div>
-							<div class="td td-item-total">
-								<input class="td-item-total-input" type="text" placeholder="$499.99" disabled="true"></div>
-						</div>
--->
+					<div class="tbody-shopping connectedSortable" id="sortable1">
+						<ul class="tr" >
+							<li class"td">
+								<input class="col-qty-input ui-state-default" type="text" placeholder="1" maxlength="2" >
+								<input class="td-item-description-input ui-state-default" type="text" placeholder="Shopping list item" >
+								<input class="td-item-price-input ui-state-default" type="text" placeholder="$ 0.00"  disabled >
+								<input class="td-item-total-input ui-state-default" type="text" placeholder="$ 0.00"  disabled >
+								<img class="trash ui-state-default" src="img/x.png" alt="trash">
+							</li>
+						</ul>
+
 					</div> <!-- End of tbody -->
 				</div> <!-- End of table shopping-list -->
 				
-				<div class="td-item-total-all">
-					<img class="trash" src="img/x.png">
+				<div class="total-all">
+<!--					<img class="trash" src="img/x.png">-->
 					<h3>$6.98</h3>
 				</div>
 				
 				<div class="caption"><h2>Purchased Items</h2></div>
-				<div class="table items-purchased">
+				<div class="table item-purchases">
 					<div class="thead">
-						<div class="tr-purchases">
-							<div class="col">Qty</div>
-							<div class="col col-item-description">Item description</div>
-							<div class="col">Spent</div>
-						</div>
+						<ul class="thead-purchases">
+							<li class="col col-qty">Qty</li>
+							<li class="col col-item-description">Item description</li>
+							<li class="col col-price">Price</li>
+							<li class="col col-spent">Spent</li>
+							<li class="col col-trash"><img class="col-trash" src="img/x.png" alt="trash"></li>
+						</ul>
 					</div>
 					
-					<div class="tbody-purchases">
-						<div class="tr-purchases">
-							<div class="td td-item-qty-total"><input type="text" placeholder="1" disabled="true"></div>
-							<div class="td td-item-description"><input type="text" placeholder="Purchased Item #1" disabled="true"></div>
-							<div class="td td-item-amount-spent"><input type="text" placeholder="$0.99" disabled="true"></div>
-						</div>
-						
-						<div class="tr-purchases">
-							<div class="td td-item-qty-total"><input type="text" placeholder="1" disabled="true"></div>
-							<div class="td td-item-description"><input type="text" placeholder="Purchased Item #2" disabled="true"></div>
-							<div class="td td-item-amount-spent"><input type="text" placeholder="$5.99" disabled="true"></div>
-						</div>
+					<div class="tbody-purchases connectedSortable" id="sortable2" >
+						<ul class="tr" >
+							<li class"td">
+								<input class="col-qty ui-state-highlight" type="text" placeholder="1" maxlength="2" >
+								<input class="td-item-description ui-state-highlight" type="text" placeholder="Shopping list item" >
+								<input class="td-item-price ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
+								<input class="td-item-total ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
+								<img class="trash ui-state-highlight" src="img/x.png" alt="trash">
+							</li>
+						</ul>
 					</div>	<!-- End of tbody items-purchased -->				
 				</div> <!-- End of table items-purchased -->
 				
-				<div class="td-item-total-spent">
+				<div class="total-spent">
 					<h3>$6.98</h3>
 				</div>
 				
 			</section>
+<!--
 			<footer>
 				<h4><a href="https://www.flickr.com/photos/56218409@N03/">Background Image by Matthias Ripp</a></h4>
 			</footer>
+-->
 		</section>
 	</div>
 	</section>
 	
 	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="js/app.js"></script>
+
 </body>
 </html>
