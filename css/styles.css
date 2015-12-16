@@ -223,7 +223,6 @@ footer {
 
 /*---- SHOPPING LIST ITEMS ----*/
 
-/*  COME BACK AND MODIFY TABLE*/
 .table { 
 	width: 100%;
 	height: 300px;
@@ -261,8 +260,9 @@ footer {
 }
 
 .tr li {
-	width: 100;
+	width: 37.18em;
 	color: #000;
+	text-align: center;
 }
 
 .tr input {
@@ -275,7 +275,8 @@ footer {
 }
 
 .td-item-description-input {
-	width: 21.8125em;
+	width: 20.8125em;
+	margin-right: em;
 	padding-right: 2%;
 	text-align: center!important;
 }
@@ -285,7 +286,7 @@ footer {
 
 .col-item-description,
 .td-item-description {
-	width: 63.1%;
+	width: 23.46em;
 	text-align: center!important;
 	padding-left: 12px;
 }
@@ -294,7 +295,7 @@ footer {
 .td-item-price,
 .td-item-total-input,
 .td-item-total {
-	width: 14.3%;
+	width: 5.3em;
 }
 
 .col-price,
@@ -305,12 +306,12 @@ footer {
 
 .col-qty-input,
 .col-qty {
-	width: 6.8%;
+	width: 2.52em;
 }
 
 .tbody-shopping ul,
 .tbody-purchases ul {
-	width: 100%;;
+	width: 37.1875em;
 	padding: 2px 0px 2px 0px;
 	margin: 0 auto 6px!important;
 }
@@ -346,8 +347,7 @@ footer {
 .total-spent h3 {
 	display: block;
 	height: 55px;
-	margin-left: 6px;;
-	width: 580px;
+	margin-left: 6px;
 	font-size: 1.3em;
 }
 
