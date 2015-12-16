@@ -257,7 +257,7 @@ footer {
 .td,
 .col {
 	display: table-cell;
-	padding: 3px 0px;
+	padding: .1875em 0px;
 }
 
 .tr li {
@@ -267,15 +267,20 @@ footer {
 
 .tr input {
 	text-align: right;
-	height: 20px;
+	height: 1.25em;
 	margin-top: 4px;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
 }
 
+.td-item-description-input {
+	width: 60%;
+	padding-right: 2%;
+	text-align: center!important;
+}
+
 .col-item-description,
-.td-item-description-input,
 .td-item-description {
 	width: 63.1%;
 	text-align: center!important;
@@ -286,7 +291,7 @@ footer {
 .td-item-price,
 .td-item-total-input,
 .td-item-total {
-	width: 12.5%;
+	width: 14.3%;
 }
 
 .col-price,
