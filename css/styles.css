@@ -275,8 +275,8 @@ footer {
 }
 
 .td-item-description-input {
-	width: 20.8125em;
-	margin-right: em;
+	width: 18.8125em;
+/*	margin-right: em;*/
 	padding-right: 2%;
 	text-align: center!important;
 }
@@ -286,7 +286,7 @@ footer {
 
 .col-item-description,
 .td-item-description {
-	width: 23.46em;
+	width: 19.75em;
 	text-align: center!important;
 	padding-left: 12px;
 }
