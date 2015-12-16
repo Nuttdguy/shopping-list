@@ -275,10 +275,12 @@ footer {
 }
 
 .td-item-description-input {
-	width: 50%;
+	width: 22.3125em;
 	padding-right: 2%;
 	text-align: center!important;
 }
+
+/*note .main .content is 595px wide*/
 
 .col-item-description,
 .td-item-description {
