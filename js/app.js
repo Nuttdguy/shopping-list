@@ -86,58 +86,63 @@ var formatCurrency = function(total) {
 //  UPDATE TOTAL PRICE
 
 function updateTotalPrice() {
-	var newQty, nQty, pricePer, newTotalPrice;
+	
+		$('.td').on('mouseup', function() {
+//			var total = 0;
+			var bug = 1;
+			$(this).addClass('active');
+			var qty = parseInt($('.active input').eq(0).val());
+			var unit = parseInt($('.active input').eq(2).val());
+			console.log ( qty + " +++ " + unit)
 
-	$('#totalQty').on('click', function() {
-		var newQty = $('#totalQty').val();
-		var nQty = parseInt(newQty);
-		var pricePer = $('#unitPrice').val();
-		var newTotalPrice = (nQty * pricePer).toFixed(2);
+			var calculate = unit * qty;
+			$('.active input').eq(3).val(calculate);
+			
+//			var total = total + (calculate + total);		
+//			console.log(calculate + '  --- Step calculate');
+//			console.log(total);
+//			return total;
+		})
 		
-		console.log(nQty);
-		console.log(pricePer);
-		console.log(newTotalPrice);
-		console.log("Update total price");
-		$('#shopping-list-total').html('$ ' + newTotalPrice);
-		return $('#totalPrice').val(newTotalPrice);
-	})
+		$('.td').on('click', function() {
+			$(this).removeClass('active');
+		})
 	
 };
 
 //  ADD ITEMS TO SHOPPING LIST
 
 function addItems() {
-	var itemPrice;
+	var itemPrice, counter='0';
 	
-		$('button').on('click', function() {
+		$('#add-item-button').on('click', function() {
 			var itemDescription = $('.add-item-name').val();
 			var itemPrice = $('.add-item-price').val();
 			var uniqueTime = new Date().getTime();
 			
-			var inputQty = $('<input class="col-qty-input ui-state-default" onclick="updateTotalPrice()" id="totalQty" type="number" placeholder="1" maxlength="2" >');
-			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="40" placeholder="Shopping list item" >').text($('input[type=text].add-item-name')).val(itemDescription);
-			var inputPrice = $('<input class="td-item-price-input ui-state-default" id="unitPrice" value="$ " placeholder="$0.00" readonly="readonly"  >').val(itemPrice);
-			var inputTotal = $('<input class="td-item-total-input ui-state-default" id="totalPrice" value="" placeholder="$ 0.00" readonly="readonly" >').val(itemPrice);
+			var inputQty = $('<input class="col-qty-input ui-state-default totalCalc" onclick="updateTotalPrice()" type="number" placeholder="1" maxlength="2" >').last().addClass('totalQty' + counter);
+			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="40" placeholder="Shopping list item" >').val(itemDescription); //text($('input[type=text].add-item-name')).val(itemDescription);
+			var inputPrice = $('<input class="td-item-price-input ui-state-default totalCalc unitPrice" placeholder="$0.00" readonly="readonly"  >').last().addClass('unitPrice' + counter).val(itemPrice);
+			var inputTotal = $('<input class="td-item-total-input ui-state-default totalCalc totalPrice" placeholder="$ 0.00" readonly="readonly" >').last().addClass('totalPrice' + counter).val(itemPrice);
 
 			var ul = $("<ul>", {class: "tr", id: uniqueTime });
-			var li = $("<li>", {class: "td" });
+			var li = $("<li>", {class: "td td" + counter });
 			var listItems = $(li).append(function() {
 				$(this).append(inputQty);
 				$(this).append(inputDescription);
 				$(this).append(inputPrice);
 				$(this).append(inputTotal);
+				counter++;
+//				$(this).addClass('td' + counter);
+//				console.log(counter);
 			})
-			
-			var tableRow = $(ul).append(listItems).appendTo('.tbody-shopping');
 
+			var tableRow = $(ul).append(listItems).appendTo('.tbody-shopping');
+			
 			var clearNameInput = $('.add-item-name, :reset').val('');
 			var clearPriceInput = $('.add-item-price, :reset').val(' ');
-			return itemPrice;
 		})
 		
-	$('#unitPrice').val(itemPrice);
-	$('#totalPrice').val(itemPrice);
-	
 };
 	
 	
