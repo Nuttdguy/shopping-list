@@ -35,7 +35,7 @@ function trashHover() {
 			"background-color": "rgba(248, 38, 0, 0.5)",
 			"width": "38px",
 			"height": "38px",
-			"transition": "background-color 1.5s, width 1.5s, height 1.5s",
+			"transition": "background-color 1s, width 1s, height 1s",
 		})			
 	})
 	
@@ -44,7 +44,7 @@ function trashHover() {
 			"background-color": "rgba(248, 38, 0, 0)",
 			"width": "34px",
 			"height": "34px",
-			"transition": "background-color 1.5s, width 1.5s, height 1.5s",
+			"transition": "background-color 1s, width 1s, height 1s",
 		})
 	})
 };
