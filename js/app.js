@@ -115,11 +115,11 @@ function addItems() {
 			var uniqueTime = new Date().getTime();
 			
 			var inputQty = $('<input class="col-qty-input ui-state-default" onclick="updateTotalPrice()" id="totalQty" type="number" placeholder="1" maxlength="2" >');
-			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="30" placeholder="Shopping list item" >').text($('input[type=text].add-item-name')).val(itemDescription);
+			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="40" placeholder="Shopping list item" >').text($('input[type=text].add-item-name')).val(itemDescription);
 			var inputPrice = $('<input class="td-item-price-input ui-state-default" id="unitPrice" value="$ " placeholder="$0.00" readonly="readonly"  >').val(itemPrice);
 			var inputTotal = $('<input class="td-item-total-input ui-state-default" id="totalPrice" value="" placeholder="$ 0.00" readonly="readonly" >').val(itemPrice);
 
-			var ul = $("<ul>", {class: "tr", id: uniqueTime});
+			var ul = $("<ul>", {class: "tr", id: uniqueTime });
 			var li = $("<li>", {class: "td" });
 			var listItems = $(li).append(function() {
 				$(this).append(inputQty);

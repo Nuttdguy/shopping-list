@@ -249,8 +249,10 @@ footer {
 	height: 40px;
 	border-radius: 4px;
 	background-color: #35cc11;
+/*
 	box-shadow: 2px 2px 6px rgba(44, 16, 255, 0.6);
 	transition: background-color .6s, box-shadow .6s;
+*/
 }
 
 .td,
@@ -385,6 +387,7 @@ footer {
 /*--------------------------------*/
 /*  TABLE :HOVER EFFECTS */
 /*--------------------------------*/
+/*
 
 .tr:hover {
 	background-color: rgb(250, 255, 249);
@@ -419,4 +422,5 @@ a:hover {
 }
 
 
+*/
 
