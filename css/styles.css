@@ -1,13 +1,12 @@
+html {
+	height: 100%;
+}
 
 body {
 	font-family: arial, sans-serif;
 	color: #ffffff;
 	font-size: 16px;
-	background-color: #000;
-/*
-	background-image: url(../css/img/15674961512_65fd49abe7_k.jpg) no-repeat center center fixed;
-	background-size: contain;
-*/
+	background-color: #ff5a5a;
 	height: 100%;
 }
 
@@ -18,6 +17,7 @@ h1, h2 {
 	letter-spacing: .05em;
 	font-size: 1.4em;
 	margin: 6px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
 }
 
 h3, h4, div, input {
@@ -25,10 +25,20 @@ h3, h4, div, input {
 	font-weight: bolder;
 	font-size: 1em;
 	margin: 0;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+button,
+.add-item input,
+input, 
+.tr {
+	border-radius: 40px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
 }
 
 input { 
 	vertical-align: bottom;
+	background-color: rgba(253, 253, 253, 0.99);
 }
 
 li {
@@ -54,52 +64,53 @@ button {
 
 footer {
 	text-align: right;
-	padding-right: 12px;
-	position: relative;
-	top: 90%;
+	padding-right: 2em;
+	padding-bottom: 80px;
+/*	top: 90%;*/
+}
+
+div, section {
+	height: 100%;
+	overflow: hidden;
 }
 
 .wrapper {
-/*	background-image: url(../css/img/15674961512_65fd49abe7_k.jpg);*/
-/*	background-size: cover;*/
-/*	height: 100%;*/
-	padding-bottom: 70%;
-	background: -webkit-linear-gradient(rgba(59, 58, 58, 0.5), rgba(0, 0, 0, 0.5));
-	background: linear-gradient(rgb(15, 20, 46), rgba(0, 0, 0, 0.5));
+	height: 100%;
+	background: -webkit-linear-gradient(rgba(198, 206, 250, 0.85), rgba(255, 90, 90, 0.72));
+	background: linear-gradient(rgba(82, 70, 57, 0.85), rgba(217, 201, 114, 0.05));
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.33);
 }
-
-/*
 
 .wrapper-2 {
-	background: -webkit-linear-gradient(rgba(59, 58, 58, 0.5), rgba(0, 0, 0, 0.5));
-	background: linear-gradient(rgb(15, 20, 46), rgba(0, 0, 0, 0.5));
+	background: -webkit-linear-gradient(rgba(255, 253, 253, 0.5), rgba(0, 0, 0, 0.1));
+	background: linear-gradient(rgba(255, 253, 253, 0.05), rgba(0, 0, 0, 0.1));
 	overflow: hidden;
 }
-*/
+
 
 /*-----------------------*/
 /*   PLACEHOLDER STYLES   */
 /*-----------------------*/
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color:    rgba(64, 64, 64, 0.8);
+  color:    rgba(39, 18, 72, 0.81);
 /*	font-size: 1em;*/
 	padding-top: 2px;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
- 	color:    rgba(92, 91, 91, 0.8);
+ 	color:   rgba(39, 18, 72, 0.81);
   opacity:  .8;
 /*	font-size: 1em;*/
 	padding-top: 2px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color:    rgba(92, 91, 91, 0.8);
+  color:    rgba(39, 18, 72, 0.81);
   opacity:  .8;
 /*	font-size: 1em;*/
 	padding-top: 2px;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color:    #rgba(92, 91, 91, 0.8);
+  color:    rgba(39, 18, 72, 0.81);
 /*	font-size: 1em;*/
 	padding-top: 2px;
 }
@@ -120,19 +131,18 @@ footer {
 }
 
 .profile {
-	width: 245px;
+	width: 27.5%;
 	height: 100%;
 	float: left;
 	display: inline-block;
-/*	background-color: rgba(208, 208, 208, 0.2);*/
+	text-align: center;
 }
 
 .main {
-	width: 595px;
+	width: 72.5%;
 	height: 100%;
 	display: inline-block;
 	float: left;
-/*	background-color: bisque;*/
 }
 
 .profile .content, 
@@ -140,7 +150,6 @@ footer {
 .sidebar .content {
 	width: 100%;
 	padding-bottom: 3em;
-	text-align: left;
 }
 
 /*-----------------------*/
@@ -151,17 +160,25 @@ footer {
 	margin: 2em;
 	width: 10em;
 	border-radius: 50%;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.33);
 }
 
 .profile .description h2 {
 	font-size: 1.5em;
-	margin-top: 52px;
-	text-align: center;
+	margin-top: 57px;
+	margin-bottom: 1em;
+	width: 100%;
 }
 
-.profile .description h3 {
-	padding: .5em 1.7em;
+.profile .description input {
+	font-size: 1.2em;
+	padding: .5em 0;
+	width: 100%;
 	text-align: center;
+	margin-bottom: 1em;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+	background-color: transparent;
+	border: none;
 }
 
 /*-----------------------*/
@@ -171,21 +188,20 @@ footer {
 
 /*---- LIST-HEADIING STYLES ----*/
 
-.main .list-heading {
-	width: 550px;
+.list-heading {
+	width: 100%;
 	margin: 3em auto 2em;
 	padding-bottom: 1em;
-	overflow: auto;
 	text-align: center;
 }
 
-.main .list-heading h2 {
+.list-heading h2 {
 	margin-bottom: 16px;
 }
 
-.main .list-heading input.add-item-name {
+.list-heading .add-item-name {
 	width: 350px;
-	height: 28px;
+	height: 36px;
 	font-size: 1em;
 	font-weight: bolder;
 	padding: 0 10px;
@@ -193,12 +209,13 @@ footer {
 	color: #000;
 }
 
-.main .list-heading input.add-item-price {
-	height: 28px;
+.list-heading .add-item-price {
+	height: 36px;
 	width: 180px;
 	font-size: 1em;
 	padding: 0 10px;
 	font-weight: bolder;
+	display: inline-block;
 	float: left;
 	margin-bottom: .3em;
 	color: #000;
@@ -211,21 +228,20 @@ footer {
 	color: rgba(70, 82, 82, 0.45);
 }
 
-.main .list-heading button {
-	padding: 8px 40px;
-	background-color: #35cc11;
+.list-heading button {
+	padding: 12px 40px;
+	background-color: rgba(235, 181, 78, 0.9);
 	border: none;
 	display: inline-block;
 	float: right;
-	margin: .1% 18.5% 0 0;
+	margin: .1% 6.8% 0 0;
 	font-size: 14px;
 }
 
 /*---- SHOPPING LIST ITEMS ----*/
 
 .table { 
-	width: 100%;
-	height: 300px;
+	height: 100%;
 	display: table;
 	letter-spacing: .05em;
 }
@@ -247,12 +263,9 @@ footer {
 .tr {
 	margin: 2px;
 	height: 40px;
-	border-radius: 4px;
-	background-color: #35cc11;
-/*
-	box-shadow: 2px 2px 6px rgba(44, 16, 255, 0.6);
+	background-color: rgba(235, 181, 78, 0.9);
+	box-shadow: 2px 2px 6px rgba(46, 46, 47, 0.6);
 	transition: background-color .6s, box-shadow .6s;
-*/
 }
 
 .td,
@@ -342,54 +355,54 @@ footer {
 
 .total-spent,
 .total-all {
-	padding-right: 12px;
 	text-align: right;
 }
 
-.total-spent h3 {
+.total-all, 
+.total-spent {
 	display: block;
-	height: 55px;
-	margin-left: 6px;
-	font-size: 1.3em;
+	height: 70px;
+	width: 94%;
+	border-top: 1px solid #bebebe;
+	margin-bottom: 40px;
+	padding-top: 15px;
 }
 
-.total-all h3 {
-	color: #fff;
+.total-all h3,
+.total-spent h3 {
 	float: right;
 	font-weight: bolder;
-	display: block;
-	width: 50%;
+	width: 70%;
 	font-size: 1.3em;
 	padding: 6px 0 12px;
 }
 
+.caption span {
+	font-size: .5em;
+}
+
+.total-all span {
+	display: block;
+	text-align: left;
+	font-size: .8em;
+	padding-bottom: 4px;
+}
+
 .total-all img {
-	display: inline-block;
 	float: left;
 	padding: 6px 10px;
 	width: 34px;
 	height: 34px;
 	border: 1px solid rgba(88, 87, 87, 0.4);
-	margin-top: -6px;
 	z-index: 99;
 }
-
-.total-all {
-	display: block;
-	height: 50px;
-	width: 100%;
-	border-bottom: 1px solid #bebebe;
-	margin-bottom: 40px;
-}
-
-/*div { outline: 1px solid #f00; }*/
 
 /*--------------------------------*/
 /*  TABLE :HOVER EFFECTS */
 /*--------------------------------*/
 
 .tr:hover {
-	background-color: rgb(250, 255, 249);
+	background-color: #fff;
 	box-shadow: -2px 2px 6px rgba(254, 254, 255, 0.6)
 	transition: background-color .6s box-shadow .6s;
 }
@@ -410,8 +423,12 @@ footer {
 }
 
 .list-heading button:hover {
-	background-color: rgb(39, 137, 16);
+	background-color: #fff;
 	transition: background-color .6s;
+}
+
+.description input:hover {
+	cursor: pointer;
 }
 
 a:hover {

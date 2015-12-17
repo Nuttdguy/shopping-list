@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	
 	getTime();
-//	formatCurrency();
 	sort();
 	trash();
 	trashHover();
@@ -83,33 +82,6 @@ function trash() {
 };
 
 
-////  ADD CURRENCY FORMATTING TO PRICE INPUT BOX --- DOES NOT WORK --- FORMAT OCCURS IN ADDITEM FUNCTION
-//
-//var formatCurrency = function(total) {
-//	
-//	console.log(total);
-//	var convertTotal = $('.add-item-price').val(total);
-//
-//	var neg = false;
-//	if(convertTotal < 0) {
-//			neg = true;
-//			convertTotal = Math.abs(convertTotal);
-//	}
-//	
-//	console.log(convertTotal);
-////(neg ? "-$" : '$') 
-//	var formattedValue =  parseFloat(convertTotal, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
-//	
-//	return 0;
-//	
-//	console.log(formattedValue);
-////	
-////	$('.tbody-shopping input').eq(2).val(convertTotal);
-////	$('.tbody-shopping input').eq(3).val(formattedValue);
-//	
-//};
-
-
 //  UPDATE PRICE, TOTAL AND SUBTOTAL 
 
 function updateTotalPrice() {
@@ -147,8 +119,8 @@ function updateTotalPrice() {
 		var shoppingSubTotal = parseFloat(storedTotalShopping).toFixed(2);
 		var purchasesSubTotal = parseFloat(storedTotalPurchases).toFixed(2);
 
-		$('.total-all h3').html('$ '+ shoppingSubTotal);
-		$('.total-spent h3').html('$ '+ purchasesSubTotal);
+		$('.total-all h3').html('Total Shopping Cost: &nbsp;&nbsp; $ '+ shoppingSubTotal);
+		$('.total-spent h3').html('Total Spent:   $ '+ purchasesSubTotal);
 
 		$('.tbody-shopping .totalPrice').removeClass('shoppingTable');
 		$('.tbody-purchases .totalPrice').removeClass('purchasesTable');
@@ -156,20 +128,26 @@ function updateTotalPrice() {
 	})
 };
 
-
 //  ADD ITEMS TO SHOPPING LIST
 
 function addItems() {
-	var itemPrice;
-	
+
 		$('#add-item-button').on('click', function() {
 			var itemDescription = $('.add-item-name').val();
-			var itemPrice = parseFloat($('.add-item-price').val()).toFixed(2);
+			var itemPrice = $('.add-item-price').val();
 			var uniqueTime = new Date().getTime();
 			
-			var inputQty = $('<input class="col-qty-input ui-state-default totalCalc" onclick="updateTotalPrice()" type="number" placeholder="1" maxlength="2" >');
-			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="40" placeholder="Shopping list item" >').val(itemDescription);
-			var inputPrice = $('<input class="td-item-price-input ui-state-default totalCalc unitPrice" placeholder="$0.00"  >').val(itemPrice);
+			if (!itemPrice.trim() || !$.isNumeric(itemPrice)) {
+//				console.log(typeof itemPrice);
+				itemPrice = 0;
+//				console.log("checking " + itemPrice)
+			} else {
+				itemPrice = parseFloat($('.add-item-price').val()).toFixed(2);
+			}
+
+			var inputQty = $('<input class="col-qty-input ui-state-default totalCalc" onclick="updateTotalPrice()" min=0 type="number" value=1 maxlength="2" >');
+			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="40" placeholder="Shopping item" >').val(itemDescription);
+			var inputPrice = $('<input class="td-item-price-input ui-state-default totalCalc unitPrice" placeholder="$0.00" readonly="readonly" >').val(itemPrice);
 			var inputTotal = $('<input class="td-item-total-input ui-state-default totalCalc totalPrice" placeholder="$ 0.00" readonly="readonly" >').val(itemPrice);
 
 			var ul = $("<ul>", {class: "tr", id: uniqueTime });
@@ -183,9 +161,10 @@ function addItems() {
 
 			var tableRow = $(ul).append(listItems).appendTo('.tbody-shopping');
 			
-			var clearNameInput = $('.add-item-name, :reset').val('');
-			var clearPriceInput = $('.add-item-price, :reset').val(' ');
+			$('.add-item-price, :reset').val('');
+			$('.add-item-name, :reset').val('');
 		})
+
 };
 	
 	

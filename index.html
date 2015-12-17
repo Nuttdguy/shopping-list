@@ -16,7 +16,8 @@
 			<section class="content">
 				<div class="description" >
 					<h2>Welcome</h2>
-					<h3>Phouthalang Pygnasak</h3>
+					<input type="text" max="20" placeholder="Your name" >
+<!--					Phouthalang Pygnasak</h3>-->
 					<h3 onload="getTime()" class="today">Todays date</h3>
 				</div>
 				<div class="avatar">
@@ -29,16 +30,16 @@
 			<section class="content">
 			
 				<div class="list-heading">
-					<h2>Add Items To Shopping List</h2>
+					<h2>Add A Shopping List Item</h2>
 					<div class="add-item">
-						<input type="text" required class="add-item-name" maxlength="40" placeholder="Enter shopping list item">
-						<input type="text" required maxlength=10 placeholder="Enter price (e.g. $3.99)" class="add-item-price" value="">	
+						<input type="text" required class="add-item-name" maxlength="40" placeholder="Shopping item">
+						<input type="text" required maxlength=10 placeholder="Price (e.g. $3.99)" class="add-item-price" value="">
+						<button class="add-item-button" id='add-item-button' >Add Item</button>
 					</div>
-					<button class="add-item-button" id='add-item-button' >Add Item</button>
 					<div class="clear"></div>
 				</div>
 				
-				<div class="caption"><h2>Shopping List</h2></div>
+				<div class="caption"><h2>Shopping List &#9679;&nbsp;<span>Keep items you haven't purchased in this list</span></h2></div>
 				<div class="table shopping-list">
 					<div class="thead">
 						<ul class="thead-shopping">
@@ -47,9 +48,7 @@
 							<li class="col col-price">Price</li>
 							<li class="col col-total">Total</li>
 						</ul>
-					</div>
-					
-					<div class="tbody-shopping connectedSortable droptrue" id="sortable1">
+						<div class="tbody-shopping droptrue" id="sortable1">
 <!--
 						<ul class="tr" >
 							<li class="td">
@@ -61,16 +60,19 @@
 						</ul>
 -->
 
-					</div> <!-- End of tbody -->
+						</div> <!-- End of tbody -->
+					</div>
 				</div> <!-- End of table shopping-list -->
 				
+				<div class="clear"></div>
 				<div class="total-all">
+					<span> Drag &amp; drop here to delete</span>
 					<img class="trash" src="img/x.png" id="trash" >
-					<h3 id='shopping-list-total'>$ sub-total</h3>
+					<h3 >$ sub-total</h3>
 				</div>
 				<div class="clear"></div>
 				
-				<div class="caption"><h2>Purchased Items</h2></div>
+				<div class="caption"><h2>Purchased Items &#9679;&nbsp;<span> Drag purchased items to this list</span></h2></div>
 				<div class="table item-purchases">
 					<div class="thead">
 						<ul class="thead-purchases">
@@ -79,9 +81,8 @@
 							<li class="col col-price">Price</li>
 							<li class="col col-spent">Spent</li>
 						</ul>
-					</div>
-					
-					<div class="tbody-purchases dropfalse connectedSortable" id="sortable2" >
+
+						<div class="tbody-purchases dropfalse" id="sortable2" >
 <!--
 						<ul class="tr" >
 							<li class="td">
@@ -90,32 +91,27 @@
 								<input class="td-item-price ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
 								<input class="td-item-total ui-state-highlight" type="text" placeholder="$ 0.00"  disabled >
 							</li>
-						</ul>
--->
-					</div>	<!-- End of tbody items-purchased -->		
-					
-					<div class="tbody-purchases droptrue connectedSortable" id="sortable3" >
-<!--
-						<ul class="tr" >
-							 SECTION FOR JQUERY UI SORTABLE -- ACTS AS A THIRD LIST ELEMENT
-						</ul>
--->
-					</div>	<!-- End of tbody items-purchased 3 -->
-					<br style="clear:both">
-						
-				</div> <!-- End of table items-purchased -->
+						</ul> -->
+							<div class="tbody-purchases droptrue" id="sortable3" >
+							</div>	<!-- End of JQUERY UI SORTABLE -- tbody items-purchased 3 
+
+						</div>	<!-- End of tbody items-purchases -->		
+						</div> <!-- End of thead items-purchases -->		
+					</div> <!-- End of table -->
+				</div>
+				<div class="clear"></div>
 				
 				<div class="total-spent">
-					<h3 id='shopping-list-total'>$ sub-total</h3>
+					<h3 >$ sub-total</h3>
 				</div>
 				
 			</section>
 			<footer>
-<!--				<h4><a href="https://www.flickr.com/photos/56218409@N03/">Background Image by Matthias Ripp</a></h4>				-->
 				<h4><a href="https://github.com/Nuttdguy">Shopping List by Phouthalang Pygnasak</a></h4>
 			</footer>
 		</section>
 	</div>
+	<div class="clear"></div>
 	</section>
 	
 	<script src="http://code.jquery.com/jquery.min.js"></script>
