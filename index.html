@@ -17,7 +17,7 @@
 				<div class="description" >
 					<h2>Welcome</h2>
 					<h3>Phouthalang Pygnasak</h3>
-					<h3>December 15th 2015</h3>
+					<h3 onload="getTime()" class="today">Todays date</h3>
 				</div>
 				<div class="avatar">
 					<img src="img/self.png" alt="avatar">
@@ -31,10 +31,10 @@
 				<div class="list-heading">
 					<h2>Add Items To Shopping List</h2>
 					<div class="add-item">
-						<input type="text" class="add-item-name" maxlength="40" placeholder="Enter shopping list item">
-						<input type="text" name="quantity" class="add-item-price" value=" ">	
+						<input type="text" required class="add-item-name" maxlength="40" placeholder="Enter shopping list item">
+						<input type="text" required maxlength=10 placeholder="Enter price (e.g. $3.99)" class="add-item-price" value="">	
 					</div>
-					<button class="add-item-button" onclick="formatCurrency()" id='add-item-button'>Add Item</button>
+					<button class="add-item-button" id='add-item-button' >Add Item</button>
 					<div class="clear"></div>
 				</div>
 				
@@ -97,7 +97,7 @@
 					<div class="tbody-purchases droptrue connectedSortable" id="sortable3" >
 <!--
 						<ul class="tr" >
-
+							 SECTION FOR JQUERY UI SORTABLE -- ACTS AS A THIRD LIST ELEMENT
 						</ul>
 -->
 					</div>	<!-- End of tbody items-purchased 3 -->
