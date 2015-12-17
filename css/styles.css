@@ -25,15 +25,20 @@ h3, h4, div, input {
 	font-weight: bolder;
 	font-size: 1em;
 	margin: 0;
+	border: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
 }
 
-button,
-.add-item input,
-input, 
+.list-heading input,
+button, 
 .tr {
 	border-radius: 40px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+input:focus,
+button:focus {
+	outline: none;
 }
 
 input { 
@@ -264,8 +269,7 @@ div, section {
 	margin: 2px;
 	height: 40px;
 	background-color: rgba(235, 181, 78, 0.9);
-	box-shadow: 2px 2px 6px rgba(46, 46, 47, 0.6);
-	transition: background-color .6s, box-shadow .6s;
+	transition: background-color .6s;
 }
 
 .td,
@@ -291,13 +295,9 @@ div, section {
 
 .td-item-description-input {
 	width: 18.8125em;
-/*	margin-right: em;*/
-	padding-right: 2%;
+	padding-right: 6px;
 	text-align: center!important;
 }
-
-/*Why doesn't changing the width correct the total price float issue?*/
-/*note .main .content is 595px wide*/
 
 .col-item-description,
 .td-item-description {
@@ -322,6 +322,11 @@ div, section {
 .col-qty-input,
 .col-qty {
 	width: 2.52em;
+}
+
+.col-qty-input {
+	float: left;
+	margin-left: .5em;
 }
 
 .tbody-shopping ul,
@@ -403,8 +408,7 @@ div, section {
 
 .tr:hover {
 	background-color: #fff;
-	box-shadow: -2px 2px 6px rgba(254, 254, 255, 0.6)
-	transition: background-color .6s box-shadow .6s;
+	transition: background-color .6s;
 }
 
 .total-all img {

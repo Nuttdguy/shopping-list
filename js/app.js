@@ -146,7 +146,7 @@ function addItems() {
 			}
 
 			var inputQty = $('<input class="col-qty-input ui-state-default totalCalc" onclick="updateTotalPrice()" min=0 type="number" value=1 maxlength="2" >');
-			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="40" placeholder="Shopping item" >').val(itemDescription);
+			var inputDescription = $('<input class="td-item-description-input ui-state-default" type="text" maxlength="35"  >').val(itemDescription);
 			var inputPrice = $('<input class="td-item-price-input ui-state-default totalCalc unitPrice" placeholder="$0.00" readonly="readonly" >').val(itemPrice);
 			var inputTotal = $('<input class="td-item-total-input ui-state-default totalCalc totalPrice" placeholder="$ 0.00" readonly="readonly" >').val(itemPrice);
 

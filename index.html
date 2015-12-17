@@ -16,8 +16,7 @@
 			<section class="content">
 				<div class="description" >
 					<h2>Welcome</h2>
-					<input type="text" max="20" placeholder="Your name" >
-<!--					Phouthalang Pygnasak</h3>-->
+					<input type="text" minlength="2" maxlength="20" placeholder="Your name" >
 					<h3 onload="getTime()" class="today">Todays date</h3>
 				</div>
 				<div class="avatar">
@@ -32,9 +31,9 @@
 				<div class="list-heading">
 					<h2>Add A Shopping List Item</h2>
 					<div class="add-item">
-						<input type="text" required class="add-item-name" maxlength="40" placeholder="Shopping item">
-						<input type="text" required maxlength=10 placeholder="Price (e.g. $3.99)" class="add-item-price" value="">
-						<button class="add-item-button" id='add-item-button' >Add Item</button>
+						<input type="text" required pattern=".{3,}" title="3 characters minimum" class="add-item-name" maxlength="40" placeholder="Shopping item">
+						<input type="text" required maxlength="10" placeholder="Price (e.g. $3.99)" class="add-item-price" value="">
+						<button type="submit" class="add-item-button" id='add-item-button' >Add Item</button>
 					</div>
 					<div class="clear"></div>
 				</div>
